@@ -1,5 +1,5 @@
 export default {
-  INCREASE_COUNT: "INCREASE_COUNT_EXAMPLE_STORE",
+  UPDATE_PLANETS: "UPDATE_PLANETS_STORE",
 
-  STORE_NAME: "exampleStore",
+  STORE_NAME: "planets",
 };

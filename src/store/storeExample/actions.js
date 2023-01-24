@@ -1,10 +1,11 @@
 import constants from "./constants";
 
-export const increaseCount = () => {
+export const updatePlanetStore = (data) => {
   return async (dispatch) => {
     dispatch({
-      type: constants.INCREASE_COUNT,
+      type: constants.UPDATE_PLANETS,
       payload: {
+        planets: data,
         lastUpdated: new Date().toLocaleString(),
       },
     });

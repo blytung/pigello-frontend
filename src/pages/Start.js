@@ -1,29 +1,18 @@
-import { useState, useRef, useCallback } from "react";
-import { useEffect } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  constants as exampleConstants,
+  increaseCount,
+} from "../store/storeExample";
 import FilterMenu from "../components/FilterMenu";
 import PlanetCardsList from "../components/PlanetCardsList";
 
 const Start = () => {
-  const [planets, setPlanets] = useState([]);
-  useEffect(() => {
-    const fetchSpace = async () => {
-      const response = await fetch(
-        "https://api.le-systeme-solaire.net/rest/bodies/",
-        {
-          method: "GET",
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const planets = await response.json();
-      const isPlanet = planets.bodies.filter((bodie) => bodie.isPlanet);
+  const planets = useSelector((state) => state["planets"].planets);
 
-      setPlanets(isPlanet);
-    };
-    fetchSpace();
-  }, []);
+  useEffect(() => {
+    console.log("rerender", planets);
+  }, [planets]);
   const ref = useRef();
 
   // The scroll listener
@@ -38,7 +27,7 @@ const Start = () => {
   return (
     <div className='solar-system' id='scrollable' ref={ref}>
       <PlanetCardsList planets={planets} />
-      <FilterMenu planets={planets} />
+      <FilterMenu />
     </div>
   );
 };
