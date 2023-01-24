@@ -13,19 +13,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+p {
+  margin: 0;
+  padding: 0;
+}
 
 .App {
-  background-color: #131313;
+  background: rgb(47, 31, 57);
+    background: radial-gradient(circle,
+        rgba(47, 31, 57, 1) 0%,
+        rgba(25, 17, 57, 1) 42%,
+        rgba(4, 4, 74, 1) 100%);
   width: 100vw;
   height: 100vh;
   display: flex;
+  position: fixed;
+    overflow: auto;
   justify-content: center;
   align-items: center;
 }
 
-.app-wrapper {
-  background-color: red;
-  padding: 30px;
+.solar-system {
   height: auto;
   display: inline-block;
+  margin: auto;
+  
+    width: 100%;
+    height: 100%;
+  }
+  
+  .plannet-wrapper {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
+    align-items: center;
 }

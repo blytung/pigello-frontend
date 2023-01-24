@@ -2,7 +2,8 @@ const theme = {
   colors: {
     black: "rgb(34,34,34)",
     white: "rgb(251,251,251)",
-
+    vanillaWhite: "rgb(251,251,251)",
+    opacityWhite: "rgba(251,251,251, 0.2)",
     green: "#2ec177",
     greenLight: "#e4fbef",
     greenDark: "#24995e",
@@ -32,6 +33,7 @@ const theme = {
   fontWeights: {
     headerLarge: 600,
     headerMedium: 600,
+    headerBold: "bold",
     headerSmall: 500,
     headerXSmall: 400,
     data: 500,
