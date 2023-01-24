@@ -1,9 +1,5 @@
-import { useEffect, useState, useRef, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  constants as exampleConstants,
-  increaseCount,
-} from "../store/storeExample";
+import { useEffect, useRef, useCallback } from "react";
+import { useSelector } from "react-redux";
 import FilterMenu from "../components/FilterMenu";
 import PlanetCardsList from "../components/PlanetCardsList";
 
