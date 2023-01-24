@@ -1,2 +1,2 @@
-import PlanetImages from "./planets.js";
+import PlanetImages from "./PlanetImages.js";
 export { PlanetImages };
