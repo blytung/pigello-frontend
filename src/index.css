@@ -17,9 +17,7 @@ p {
   margin: 0;
   padding: 0;
 }
-a {
-  color: #FFF;
-}
+
 
 .filter-menu-wrapper {
   position: fixed;
@@ -48,14 +46,10 @@ a {
 .solar-system {
   height: auto;
   margin: auto;
-  width: 100%;
-  height: 2100%;
-    overflow: scroll;
+  overflow: hidden;
   }
-  
   .plannet-wrapper {
-    display: grid;
-    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
+    display: flex;
     align-items: center;
 }
 .image-wrapper {

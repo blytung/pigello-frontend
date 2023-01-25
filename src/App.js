@@ -3,16 +3,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { ThemeProvider as SCTheme } from "styled-components";
 
 import theme from "./theme";
-import {
-  constants as exampleConstants,
-  updatePlanetStore,
-} from "./store/storeExample";
+import { updatePlanetStore } from "./store/storeExample";
 import { useEffect } from "react";
 import Start from "./pages/Start";
+import FilterMenu from "./components/FilterMenu";
 function App() {
   const dispatch = useDispatch();
-  const planets = useSelector((state) => state["planets"].planets);
-  console.log("planets", planets);
+
+  const planets = useSelector((state) => state["planets"]);
+
+  useEffect(() => {
+    console.log("planets is updated", planets);
+  }, [planets]);
   useEffect(() => {
     const fetchSolarSystem = async () => {
       const response = await fetch(
@@ -27,15 +29,16 @@ function App() {
       );
       const solarSystem = await response.json();
       const isPlanet = solarSystem.bodies.filter((bodie) => bodie.isPlanet);
-      dispatch(updatePlanetStore(isPlanet));
+      if (response.status === 200) dispatch(updatePlanetStore(isPlanet));
     };
     fetchSolarSystem();
-  }, []);
+  }, [dispatch]);
 
   return (
     <SCTheme theme={theme}>
       <div className='App'>
         <Start />
+        <FilterMenu />
       </div>
     </SCTheme>
   );

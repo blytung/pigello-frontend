@@ -1,14 +1,13 @@
 import { useEffect, useRef, useCallback } from "react";
 import { useSelector } from "react-redux";
-import FilterMenu from "../components/FilterMenu";
 import PlanetCardsList from "../components/PlanetCardsList";
 
 const Start = () => {
-  const planets = useSelector((state) => state["planets"].planets);
+  const planetStore = useSelector((state) => state["planets"].planets);
 
   useEffect(() => {
-    console.log("rerender", planets);
-  }, [planets]);
+    console.log("rerender", planetStore);
+  }, [planetStore]);
   const ref = useRef();
 
   // The scroll listener
@@ -22,8 +21,7 @@ const Start = () => {
   }, [handleScroll]);
   return (
     <div className='solar-system' id='scrollable' ref={ref}>
-      <PlanetCardsList planets={planets} />
-      <FilterMenu />
+      <PlanetCardsList planets={planetStore} />
     </div>
   );
 };

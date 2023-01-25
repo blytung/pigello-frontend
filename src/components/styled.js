@@ -20,9 +20,9 @@ export const FilterButton = styled.button`
   font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
   padding: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
   background-color: ${({ theme }) => theme.colors.plum};
-  border: none;
+  border: 1px solid ${({ theme }) => theme.colors.plumOffset};
   border-radius: 3px;
   cursor: pointer;
 `;
@@ -47,6 +47,28 @@ export const ExampleSmallText = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
 `;
 export const PlanetDiv = styled.div`
+  flex-basis: calc(100vw / 3);
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  transition: all 0.3s ease-out;
+  img {
+    transition: all 0.3s ease-out;
+    -webkit-filter: drop-shadow(0px 0px 0px transparent);
+    filter: drop-shadow(0px 0px 0px transparent);
+  }
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: calc(100vh - 60px);
+  justify-content: center;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.purple};
+  font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
+
   &:hover ${InfoBox} {
     transition: all 0.5s ease-out;
     box-shadow: 1px 1px 10px ${({ theme }) => theme.colors.opacityBlack};
@@ -72,26 +94,6 @@ export const PlanetDiv = styled.div`
       filter: drop-shadow(5px 15px 15px rgba(83, 158, 219, 0.2));
     }
   }
-
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-
-  transition: all 0.3s ease-out;
-  img {
-    transition: all 0.3s ease-out;
-    -webkit-filter: drop-shadow(0px 0px 0px #000);
-    filter: drop-shadow(0px 0px 0px #000);
-  }
-
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 25vw;
-  height: calc(100vh - 60px);
-  justify-content: center;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.purple};
-  font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
 `;
 
 

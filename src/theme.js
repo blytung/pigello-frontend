@@ -6,6 +6,7 @@ const theme = {
     opacityWhite: "rgba(251,251,251, 0.2)",
     opacityBlack: "rgba(0,0,0,0.2)",
     plum: "rgba(47, 31, 57, 1)",
+    plumOffset: "rgba(42, 25, 53, 1)",
 
     green: "#2ec177",
     greenLight: "#e4fbef",
