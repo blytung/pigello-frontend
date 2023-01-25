@@ -29,9 +29,18 @@ function App() {
       );
       const solarSystem = await response.json();
       const isPlanet = solarSystem.bodies.filter((bodie) => bodie.isPlanet);
-      if (response.status === 200) dispatch(updatePlanetStore(isPlanet));
+      if (response.status === 200) {
+        localStorage.setItem("data", JSON.stringify(isPlanet));
+        dispatch(updatePlanetStore(isPlanet));
+      }
     };
-    fetchSolarSystem();
+    if (localStorage.getItem("data")) {
+      let dataFromLocalStorage = JSON.parse(localStorage.getItem("data"));
+      console.log("dataFromLocalStorage", dataFromLocalStorage);
+      dispatch(updatePlanetStore(dataFromLocalStorage));
+    } else {
+      fetchSolarSystem();
+    }
   }, [dispatch]);
 
   return (

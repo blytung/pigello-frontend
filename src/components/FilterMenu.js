@@ -14,11 +14,10 @@ const FilterMenu = () => {
   const planetsRadiusFilter = async (e) => {
     setActive({ radius: true });
     const filteredPlanets = radiusFilter(planets);
-
     dispatch(updatePlanetStore(filteredPlanets));
   };
   const planetsGravityFilter = async () => {
-    setActive({ gravity: true });
+    setActive({ gravity: active });
     const filteredPlanets = gravityFilter(planets);
     dispatch(updatePlanetStore(filteredPlanets));
   };

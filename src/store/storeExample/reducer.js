@@ -5,6 +5,7 @@ const INITIAL_STATE = {
   lastUpdated: null,
 };
 
+
 const storeExampleReducer = (state = INITIAL_STATE, action) => {
   const { type, payload } = action;
   switch (type) {
