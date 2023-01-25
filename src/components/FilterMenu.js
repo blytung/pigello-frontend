@@ -3,7 +3,8 @@ import {
   distanceFromSunFilter,
   gravityFilter,
 } from "../utils/Filter";
-import { FilterButton } from "./styled";
+import { PlanetImages } from "../utils/constants";
+import { FilterButton, Pluto } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { updatePlanetStore } from "../store/storeExample";
 import { useState } from "react";
@@ -26,6 +27,9 @@ const FilterMenu = () => {
     const filteredPlanets = distanceFromSunFilter(planets);
     dispatch(updatePlanetStore(filteredPlanets));
   };
+  const whereIsPluto = async () => {
+    console.log("Pluto is not a planet. Add it to localStorage.");
+  };
   return (
     <div className='filter-menu-wrapper'>
       <FilterButton
@@ -46,6 +50,9 @@ const FilterMenu = () => {
       >
         Gravity
       </FilterButton>
+      <Pluto onClick={whereIsPluto}>
+        <img src={PlanetImages.Pluto} alt={"Where is pluto?"} />
+      </Pluto>
     </div>
   );
 };

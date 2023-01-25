@@ -4,12 +4,24 @@ export const PlanetHeadline = styled.div`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSizes.headerMedium};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
+  margin-bottom: 10px;
 `;
 export const Headline = styled.h1`
   color: #fff;
   font-size: ${({ theme }) => theme.fontSizes.headerXLarge};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
 `;
+
+export const Pluto = styled.div`
+  display: inline-block;
+  width: 100px;
+  cursor: pointer;
+  img {
+    max-width: 36px;
+    max-height: 36px;
+  }
+`;
+
 export const InfoTextHeadline = styled.p`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
@@ -82,7 +94,17 @@ export const PlanetDiv = styled.div`
     opacity: 1;
     margin-top: 10px;
   }
+  .image-wrapper {
+    max-width: 200px;
+    max-height: 200px;
+    aspect-ratio: 1 / 1;
+    transition: all 0.2s ease-out;
+  }
   :hover {
+    .image-wrapper {
+      max-width: 220px;
+      max-height: 220px;
+    }
     transform: translate(0%, -10px);
     transition: all 0.3s ease-out;
 

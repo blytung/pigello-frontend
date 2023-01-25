@@ -36,7 +36,6 @@ function App() {
     };
     if (localStorage.getItem("data")) {
       let dataFromLocalStorage = JSON.parse(localStorage.getItem("data"));
-      console.log("dataFromLocalStorage", dataFromLocalStorage);
       dispatch(updatePlanetStore(dataFromLocalStorage));
     } else {
       fetchSolarSystem();
