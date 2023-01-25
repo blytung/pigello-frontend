@@ -2,7 +2,6 @@ const theme = {
   colors: {
     black: "rgb(34,34,34)",
     white: "rgb(251,251,251)",
-    vanillaWhite: "rgb(251,251,251)",
     opacityWhite: "rgba(251,251,251, 0.2)",
     opacityBlack: "rgba(0,0,0,0.2)",
     plum: "rgba(47, 31, 57, 1)",

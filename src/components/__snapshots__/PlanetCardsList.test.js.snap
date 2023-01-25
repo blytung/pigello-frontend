@@ -2,12 +2,16 @@
 
 exports[`Renders when array is longer or equal to 1 1`] = `
 <div>
-  No items found
+  <h1>
+    Preparing for take off
+  </h1>
 </div>
 `;
 
 exports[`Renders when the array is empty 1`] = `
 <div>
-  No items found
+  <h1>
+    Preparing for take off
+  </h1>
 </div>
 `;

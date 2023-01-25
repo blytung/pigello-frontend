@@ -18,11 +18,16 @@ p {
   padding: 0;
 }
 
+h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+
+}
 
 .filter-menu-wrapper {
   position: fixed;
   bottom: 0;
-  height: 30px;
   width: 100%;
   padding: 20px;
   background-color: rgb(12, 3, 26);

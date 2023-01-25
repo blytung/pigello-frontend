@@ -5,9 +5,6 @@ import PlanetCardsList from "../components/PlanetCardsList";
 const Start = () => {
   const planetStore = useSelector((state) => state["planets"].planets);
 
-  useEffect(() => {
-    console.log("rerender", planetStore);
-  }, [planetStore]);
   const ref = useRef();
 
   // The scroll listener

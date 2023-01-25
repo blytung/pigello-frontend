@@ -1,33 +1,34 @@
 import styled from "styled-components";
 
 export const PlanetHeadline = styled.div`
-  color: ${({ theme }) => theme.colors.vanillaWhite};
+  color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSizes.headerMedium};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
 `;
 export const Headline = styled.h1`
-  color: ${({ theme }) => theme.colors.vanillaWhite};
+  color: #fff;
   font-size: ${({ theme }) => theme.fontSizes.headerXLarge};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
 `;
 export const InfoTextHeadline = styled.p`
-  color: ${({ theme }) => theme.colors.vanillaWhite};
+  color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
   font-weight: ${({ theme }) => theme.fontWeights.body};
 `;
 export const InfoText = styled.p`
-  color: ${({ theme }) => theme.colors.vanillaWhite};
+  color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
 `;
 export const FilterButton = styled.button`
-  color: ${({ theme }) => theme.colors.vanillaWhite};
+  color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
   padding: 10px;
   margin-left: 20px;
   background-color: ${({ theme }) => theme.colors.plum};
-  border: 1px solid ${({ theme }) => theme.colors.plumOffset};
+  border: 1px solid
+    ${(props) => (props.active ? "palevioletred" : "rgba(42, 25, 53, 1)")};
   border-radius: 3px;
   cursor: pointer;
 `;

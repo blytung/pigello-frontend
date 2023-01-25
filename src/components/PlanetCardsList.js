@@ -1,17 +1,23 @@
+import { useEffect, useState } from "react";
 import PlanetCard from "../components/PlanetCard";
-import { Headline } from "./styled";
 const PlanetCardsList = ({ planets = [] }) => {
-  if (planets.length <= 0) {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    if (planets.length) {
+      setIsLoading(false);
+    }
+  }, [planets]);
+  if (isLoading) {
     return (
       <div>
-        <Headline>Preparing for take off</Headline>
+        <h1>Preparing for take off</h1>
       </div>
     );
   } else {
     return (
       <div className='plannet-wrapper'>
         {planets.map((planet, index) => (
-          <PlanetCard key={index} planet={planet} index={index} />
+          <PlanetCard key={index} planet={planet} />
         ))}
       </div>
     );
