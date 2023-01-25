@@ -14,7 +14,8 @@ export const Headline = styled.h1`
 
 export const Pluto = styled.div`
   display: inline-block;
-  width: 100px;
+  width: 40px;
+  margin-right: 20px;
   cursor: pointer;
   img {
     max-width: 36px;
@@ -43,6 +44,12 @@ export const SortButton = styled.button`
     ${(props) => (props.active ? "palevioletred" : "rgba(42, 25, 53, 1)")};
   border-radius: 3px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 7px;
+    margin-left: 10;
+  }
 `;
 
 export const ImageWrapper = styled.div`

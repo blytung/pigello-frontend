@@ -25,8 +25,24 @@ const SortMenu = () => {
   };
   const whereIsPluto = async () => {
     alert(
-      "Pluto is not a planet. I tought so, so I adding it to localStorage."
+      "Pluto is not a planet. I tought so, so I add it to localStorage and Store."
     );
+    const fetchPluto = await fetch(
+      "https://api.le-systeme-solaire.net/rest/bodies/pluton",
+      {
+        method: "GET",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const Pluto = await fetchPluto.json();
+    if (fetchPluto.status === 200) {
+      planets.push(Pluto);
+      localStorage.setItem("data", JSON.stringify(planets));
+      dispatch(updatePlanetStore(planets));
+    }
   };
   return (
     <div className='sort-menu-wrapper'>

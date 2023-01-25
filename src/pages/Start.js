@@ -15,6 +15,7 @@ const Start = () => {
 
   useEffect(() => {
     ref.current.addEventListener("wheel", handleScroll);
+    ref.current.removeEventListener("wheel", handleScroll, true); 
   }, [handleScroll]);
   return (
     <div className='solar-system' id='scrollable' ref={ref}>

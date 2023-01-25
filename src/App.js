@@ -13,8 +13,9 @@ function App() {
   const planets = useSelector((state) => state["planets"]);
 
   useEffect(() => {
-    console.log("planets is updated", planets);
+    if (planets.length) console.log("planets is updated", planets);
   }, [planets]);
+
   useEffect(() => {
     const fetchSolarSystem = async () => {
       const response = await fetch(
