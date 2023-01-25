@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders when array is longer or equal to 1 1`] = `
+<div>
+  No items found
+</div>
+`;
+
+exports[`Renders when the array is empty 1`] = `
+<div>
+  No items found
+</div>
+`;

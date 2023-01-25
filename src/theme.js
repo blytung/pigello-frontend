@@ -7,24 +7,12 @@ const theme = {
     opacityBlack: "rgba(0,0,0,0.2)",
     plum: "rgba(47, 31, 57, 1)",
     plumOffset: "rgba(42, 25, 53, 1)",
-
-    green: "#2ec177",
-    greenLight: "#e4fbef",
-    greenDark: "#24995e",
-    yellow: "#ffBA33",
-    yellowLight: "#fff4de",
-    red: "#ea5050",
-    redLight: "#fddddd",
-    blue: "#499dff",
-    blueLight: "#e4f1ff",
     purple: "#9258f0",
     purpleLight: "#f2ebff",
-
-    primaryText: "#444A55",
-    secondaryText: "#5C667B",
   },
 
   fontSizes: {
+    headerXLarge: "40px",
     headerLarge: "30px",
     headerMedium: "24px",
     headerSmall: "18px",

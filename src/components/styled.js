@@ -5,6 +5,11 @@ export const PlanetHeadline = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.headerMedium};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
 `;
+export const Headline = styled.h1`
+  color: ${({ theme }) => theme.colors.vanillaWhite};
+  font-size: ${({ theme }) => theme.fontSizes.headerXLarge};
+  font-weight: ${({ theme }) => theme.fontWeights.headerBold};
+`;
 export const InfoTextHeadline = styled.p`
   color: ${({ theme }) => theme.colors.vanillaWhite};
   font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
@@ -40,12 +45,11 @@ export const InfoBox = styled.div`
   padding: 15px 15px;
   margin: 10px;
   margin-top: 20px;
+  @media (max-width: 768px) {
+    opacity: 1;
+  }
 `;
 
-export const ExampleSmallText = styled.div`
-  color: ${({ theme }) => theme.colors.purple};
-  font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
-`;
 export const PlanetDiv = styled.div`
   flex-basis: calc(100vw / 3);
   flex-grow: 0;
@@ -94,23 +98,8 @@ export const PlanetDiv = styled.div`
       filter: drop-shadow(5px 15px 15px rgba(83, 158, 219, 0.2));
     }
   }
-`;
 
-
-export const ExampleButton = styled.button`
-  display: inline-block;
-  border: none;
-  padding: 1rem 2rem;
-  margin: 0;
-  text-decoration: none;
-  background: ${({ theme }) => theme.colors.blue};
-  color: #ffffff;
-  font-family: sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 12px;
+  @media (max-width: 768px) {
+    flex-basis: calc(100vw - 40px);
+  }
 `;
