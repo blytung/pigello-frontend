@@ -25,7 +25,7 @@ h1 {
 
 }
 
-.filter-menu-wrapper {
+.sort-menu-wrapper {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -36,7 +36,7 @@ h1 {
     display: flex;
   }
   
-  .filter-menu-wrapper div:last-child {
+        .sort-menu-wrapper div:last-child {
     margin-left: auto;
 }
 .App {

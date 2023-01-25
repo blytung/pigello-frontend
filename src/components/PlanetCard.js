@@ -4,22 +4,24 @@ import {
   InfoText,
   PlanetHeadline,
   InfoTextHeadline,
+  ImageWrapper,
+  FlexRow,
 } from "./styled";
 import { PlanetImages } from "./../utils/constants.js";
 
 const PlanetCard = ({ planet }) => {
   return (
     <PlanetDiv>
-      <div className='image-wrapper'>
+      <ImageWrapper>
         <img src={PlanetImages[planet.englishName]} alt={planet.englishName} />
-      </div>
+      </ImageWrapper>
       <PlanetHeadline>{planet.englishName}</PlanetHeadline>
       {planet?.moons ? (
         <p>
           {planet.moons.length} moons related to {planet.englishName}
         </p>
       ) : null}
-      <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
+      <FlexRow>
         <InfoBox>
           <InfoTextHeadline>Radius</InfoTextHeadline>
           <InfoText>{planet.equaRadius}</InfoText>
@@ -30,7 +32,7 @@ const PlanetCard = ({ planet }) => {
           <InfoTextHeadline>Gravity</InfoTextHeadline>
           <InfoText>{planet.gravity}</InfoText>
         </InfoBox>
-      </div>
+      </FlexRow>
     </PlanetDiv>
   );
 };

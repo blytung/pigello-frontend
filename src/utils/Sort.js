@@ -1,12 +1,12 @@
-export const distanceFromSunFilter = (planets) => {
+export const sortByDistance = (planets) => {
   planets.sort((a, b) => a.semimajorAxis - b.semimajorAxis);
   return planets;
 };
-export const radiusFilter = (planets) => {
+export const sortByRadius = (planets) => {
   planets.sort((a, b) => a.equaRadius - b.equaRadius);
   return planets;
 };
-export const gravityFilter = (planets) => {
+export const sortByGravity = (planets) => {
   planets.sort((a, b) => a.gravity - b.gravity);
   return planets;
 };

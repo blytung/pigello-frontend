@@ -32,7 +32,7 @@ export const InfoText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
 `;
-export const FilterButton = styled.button`
+export const SortButton = styled.button`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSizes.headerXSmall};
   font-weight: ${({ theme }) => theme.fontWeights.headerBold};
@@ -43,6 +43,25 @@ export const FilterButton = styled.button`
     ${(props) => (props.active ? "palevioletred" : "rgba(42, 25, 53, 1)")};
   border-radius: 3px;
   cursor: pointer;
+`;
+
+export const ImageWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  max-height: 200px;
+  aspect-ratio: 1 / 1;
+  transition: all 0.2s ease-out;
+`;
+
+export const FlexRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 `;
 
 export const InfoBox = styled.div`
@@ -94,16 +113,11 @@ export const PlanetDiv = styled.div`
     opacity: 1;
     margin-top: 10px;
   }
-  .image-wrapper {
-    max-width: 200px;
-    max-height: 200px;
-    aspect-ratio: 1 / 1;
-    transition: all 0.2s ease-out;
-  }
+
   :hover {
-    .image-wrapper {
-      max-width: 220px;
-      max-height: 220px;
+    ${ImageWrapper} {
+      max-width: 240px;
+      max-height: 240px;
     }
     transform: translate(0%, -10px);
     transition: all 0.3s ease-out;

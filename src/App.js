@@ -6,7 +6,7 @@ import theme from "./theme";
 import { updatePlanetStore } from "./store/storeExample";
 import { useEffect } from "react";
 import Start from "./pages/Start";
-import FilterMenu from "./components/FilterMenu";
+import SortMenu from "./components/SortMenu";
 function App() {
   const dispatch = useDispatch();
 
@@ -46,7 +46,7 @@ function App() {
     <SCTheme theme={theme}>
       <div className='App'>
         <Start />
-        <FilterMenu />
+        <SortMenu />
       </div>
     </SCTheme>
   );
